@@ -63,3 +63,10 @@ main {
   text-align: center;
   transition: all 1s;
 }
+
+.current-score-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
