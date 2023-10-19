@@ -46,12 +46,20 @@ main {
 }
 
 .score {
-  /* font-size: 8rem;
-  font-weight: 300;
-  color: #36824c;
-  margin-bottom: auto; */
   font-weight: 300;
   margin-bottom: auto;
   color: #36824c;
   font-size: 8rem;
+  margin-bottom: auto;
+}
+
+.current {
+  background-color: #36724c;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 1s;
 }
