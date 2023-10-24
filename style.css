@@ -52,6 +52,10 @@ main {
   margin-bottom: 1rem;
 }
 
+.player--active .name {
+  font-weight: 700;
+}
+
 .score {
   font-weight: 300;
   color: #36824c;
