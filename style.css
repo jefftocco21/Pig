@@ -38,6 +38,10 @@ main {
   align-items: center;
 }
 
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .name {
   position: relative;
   font-size: 4rem;
