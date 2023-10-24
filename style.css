@@ -118,7 +118,7 @@ main {
 }
 
 .btn--double {
-  top: 30rem;
+  top: 33rem;
 }
 
 .btn--announcer {
@@ -141,4 +141,18 @@ main {
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #36824c;
+}
+
+/*hidden */
+.hidden {
+  display: none;
 }
