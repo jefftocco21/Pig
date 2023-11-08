@@ -27,7 +27,7 @@ const init = function () {
   score0Element.textContent = 0;
   score1Element.textContent = 0;
   current0Element.textContent = 0;
-  current1Element = 0;
+  current1Element.textContent = 0;
 
   diceElement.classList.add("hidden");
 
@@ -99,4 +99,4 @@ btnHold.addEventListener("click", function () {
   }
 });
 
-btnNew.addEventListener("click", function () {});
+btnNew.addEventListener("click", init);
