@@ -82,3 +82,18 @@ btnHold.addEventListener("click", function () {
     }
   }
 });
+
+btnNew.addEventListener("click", function () {
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  current0Element.textContent = 0;
+  current1Element = 0;
+
+  //Only one element will have this class, remove from both just in case
+  player0Element.classList.remove("player--winner");
+  player1Element.classList.remove("player--winner");
+
+  //Make sure active player is player 0
+  player0Element.classList.add("player--active");
+  player1Element.classList.remove("player--active");
+});
