@@ -12,6 +12,7 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const btnDouble = document.querySelector(".btn--double");
+const announcer = document.getElementById("announcer");
 
 const current0Element = document.getElementById("current--0");
 const current1Element = document.getElementById("current--1");
@@ -66,9 +67,11 @@ btnRoll.addEventListener("click", function () {
       currentScore += dice;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
+      announcer.classList.remove("hidden");
+      announcer.textContent = `🗣️ You rolled a ${dice}`;
     } else {
       //Switch to next player
-      switchPlayer();
+      announcer.textContent = `🗣️ You rolled a ${dice}`;
     }
   }
 });
