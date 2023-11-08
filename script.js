@@ -17,14 +17,28 @@ const current0Element = document.getElementById("current--0");
 const current1Element = document.getElementById("current--1");
 
 // Preconditions
-score0Element.textContent = 0;
-score1Element.textContent = 0;
-diceElement.classList.add("hidden");
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+const init = function () {
+  const scores = [0, 0];
+  let currentScore = 0;
+  let activePlayer = 0;
+  let playing = true;
+
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  current0Element.textContent = 0;
+  current1Element = 0;
+
+  diceElement.classList.add("hidden");
+
+  //Only one element will have this class, remove from both just in case
+  player0Element.classList.remove("player--winner");
+  player1Element.classList.remove("player--winner");
+
+  //Make sure active player is player 0
+  player0Element.classList.add("player--active");
+  player1Element.classList.remove("player--active");
+};
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -83,17 +97,4 @@ btnHold.addEventListener("click", function () {
   }
 });
 
-btnNew.addEventListener("click", function () {
-  score0Element.textContent = 0;
-  score1Element.textContent = 0;
-  current0Element.textContent = 0;
-  current1Element = 0;
-
-  //Only one element will have this class, remove from both just in case
-  player0Element.classList.remove("player--winner");
-  player1Element.classList.remove("player--winner");
-
-  //Make sure active player is player 0
-  player0Element.classList.add("player--active");
-  player1Element.classList.remove("player--active");
-});
+btnNew.addEventListener("click", function () {});
