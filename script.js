@@ -31,6 +31,7 @@ const init = function () {
   current1Element.textContent = 0;
 
   diceElement.classList.add("hidden");
+  announcer.classList.add("hidden");
 
   //Only one element will have this class, remove from both just in case
   player0Element.classList.remove("player--winner");
