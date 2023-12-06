@@ -11,7 +11,6 @@ const diceElement = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
-const btnDouble = document.querySelector(".btn--double");
 const announcer = document.getElementById("announcer");
 
 const current0Element = document.getElementById("current--0");
@@ -72,6 +71,7 @@ btnRoll.addEventListener("click", function () {
       announcer.textContent = `🗣️ You rolled a ${dice}`;
     } else {
       //Switch to next player
+      switchPlayer();
       announcer.textContent = `🗣️ You rolled a ${dice}`;
     }
   }
