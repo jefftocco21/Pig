@@ -12,9 +12,13 @@ const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const announcer = document.getElementById("announcer");
+const btnRules = document.querySelector(".btn--rules");
 
 const current0Element = document.getElementById("current--0");
 const current1Element = document.getElementById("current--1");
+
+const modal = document.getElementById("rulesModal");
+const close = document.querySelector(".close");
 
 let scores, currentScore, activePlayer, playing;
 
@@ -104,3 +108,11 @@ btnHold.addEventListener("click", function () {
 });
 
 btnNew.addEventListener("click", init);
+
+btnRules.addEventListener("click", function () {
+  modal.style.display = "block";
+});
+
+close.addEventListener("click", function () {
+  modal.style.display = "none";
+});
