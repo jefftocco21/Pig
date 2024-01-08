@@ -17,8 +17,9 @@ const btnRules = document.querySelector(".btn--rules");
 const current0Element = document.getElementById("current--0");
 const current1Element = document.getElementById("current--1");
 
-const modal = document.getElementById("rulesModal");
-const close = document.querySelector(".close");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
 
 let scores, currentScore, activePlayer, playing;
 
@@ -110,9 +111,6 @@ btnHold.addEventListener("click", function () {
 btnNew.addEventListener("click", init);
 
 btnRules.addEventListener("click", function () {
-  modal.style.display = "block";
-});
-
-close.addEventListener("click", function () {
-  modal.style.display = "none";
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 });
