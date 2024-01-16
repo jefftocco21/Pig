@@ -110,7 +110,22 @@ btnHold.addEventListener("click", function () {
 
 btnNew.addEventListener("click", init);
 
-btnRules.addEventListener("click", function () {
+const openModal = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
+};
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+btnRules.addEventListener("click", openModal);
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
 });
